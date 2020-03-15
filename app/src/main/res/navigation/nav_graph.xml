@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,7 +9,17 @@
     <fragment
         android:id="@+id/overviewFragment"
         android:name="com.example.tokenlabapp.ui.overview.OverviewFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home"/>
+        android:label="fragment_overview">
+        <action
+            android:id="@+id/action_showDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.tokenlabapp.detail.DetailFragment"
+        android:label="fragment_detail">
+
+    </fragment>
 
 </navigation>
