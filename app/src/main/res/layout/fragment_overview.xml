@@ -19,10 +19,17 @@
             android:id="@+id/movies_list"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:padding="6dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:listData="@{viewModel.properties}"
+            app:spanCount="2"
+            tools:itemCount="5"
+            tools:listitem="@layout/grid_view_item" />
 
         <ImageView
             android:id="@+id/movie_image"
@@ -31,7 +38,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:moviesApiStatus="@{viewModel.status}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

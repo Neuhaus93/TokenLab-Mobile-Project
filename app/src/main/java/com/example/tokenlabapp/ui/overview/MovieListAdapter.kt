@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.tokenlabapp.databinding.ListViewItemBinding
+import com.example.tokenlabapp.databinding.GridViewItemBinding
 import com.example.tokenlabapp.network.MoviesProperty
 
 
@@ -20,7 +20,7 @@ class MovieListAdapter(private val onClickListener: OnClickListener) :
      * The MarsPropertyViewHolder constructor takes the binding variable from the associated
      * GridViewItem, which nicely gives it access to the full [MoviesProperty] information.
      */
-    class MoviePropertyViewHolder(private val binding: ListViewItemBinding) :
+    class MoviePropertyViewHolder(private val binding: GridViewItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(moviesProperty: MoviesProperty) {
             binding.property = moviesProperty
@@ -49,7 +49,7 @@ class MovieListAdapter(private val onClickListener: OnClickListener) :
      * Create new [RecyclerView] item views (invoked by the layout manager)
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviePropertyViewHolder {
-        return MoviePropertyViewHolder(ListViewItemBinding.inflate(LayoutInflater.from(parent.context)))
+        return MoviePropertyViewHolder(GridViewItemBinding.inflate(LayoutInflater.from(parent.context)))
     }
 
     /**
