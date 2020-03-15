@@ -4,6 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.tokenlabapp.detail.DetailViewModel" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,6 +18,29 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/main_photo_image"
+                android:layout_width="0dp"
+                android:layout_height="266dp"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{viewModel.selectedMovie.imgSrcUrl}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/property_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@{viewModel.displayMovieTitle}"
+                android:textColor="#de000000"
+                android:textSize="39sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/main_photo_image"
+                tools:text="To Rent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
