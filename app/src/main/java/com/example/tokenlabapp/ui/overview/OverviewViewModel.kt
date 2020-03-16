@@ -60,7 +60,7 @@ class OverviewViewModel : ViewModel() {
     private fun getMoviesProperties() {
         coroutineScope.launch {
             // Get the Deferred object for our Retrofit request
-            var getPropertiesDeferred = MoviesApi.retrofitService.getProperties()
+            val getPropertiesDeferred = MoviesApi.retrofitService.getProperties()
             try {
                 _status.value = MoviesApiStatus.LOADING
                 // This will run on a thread managed by Retrofit
