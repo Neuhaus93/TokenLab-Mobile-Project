@@ -17,20 +17,21 @@
         android:padding="5dp">
 
         <ImageView
-            android:id="@+id/movie_image"
+            android:id="@+id/movie_detail_image"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             app:imageUrl="@{property.imgSrcUrl}"
-            tools:src="@tools:sample/backgrounds/scenic" />
+            tools:src="@tools:sample/backgrounds/scenic"
+            android:contentDescription="@string/movie_poster" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="30dp"
-            android:layout_toEndOf="@id/movie_image"
+            android:layout_toEndOf="@id/movie_detail_image"
             android:orientation="vertical">
 
             <TextView
@@ -39,6 +40,9 @@
                 android:layout_height="wrap_content"
                 android:paddingVertical="2dp"
                 android:text="@{property.title}"
+                android:textColor="#D5CCCC"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 tools:text="Movie Title" />
 
             <TextView
@@ -47,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:paddingVertical="2dp"
                 android:text="@{property.release_date}"
+                android:textColor="#D5CCCC"
                 tools:text="15/03/2020" />
 
             <LinearLayout
@@ -55,8 +60,9 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
                     android:contentDescription="@string/rating_star"
                     app:srcCompat="@drawable/ic_star_solid" />
 
@@ -65,13 +71,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingVertical="2dp"
-                    android:paddingStart="8dp"
+                    android:paddingStart="6dp"
                     android:text="@{String.valueOf(property.vote_average)}"
+                    android:textColor="#D5CCCC"
                     tools:text="9.1" />
 
             </LinearLayout>
-
         </LinearLayout>
 
     </RelativeLayout>
+
 </layout>

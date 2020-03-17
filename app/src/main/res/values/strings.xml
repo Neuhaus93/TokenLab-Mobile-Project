@@ -14,4 +14,13 @@
 
     <string name="home_second">Home Second</string>
     <string name="rating_star">Rating Star</string>
+    <string name="movie_poster">Movie Poster</string>
+    <string name="tools_movie_description">Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</string>
+    <string name="movie_tagline">An offer you can\'t refuse.</string>
+    <string name="tools_genres">Genres: Drama, Crime</string>
+    <string name="movie_budget">Budget: U$6.000.000</string>
+    <string name="movie_revenue">Revenue: U$245.066.411</string>
+    <string name="movie_score">8.6 / 10</string>
+    <string name="movie_votes">8299 votes</string>
+    <string name="movie_runtime">Runtime: 175 min</string>
 </resources>

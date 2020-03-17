@@ -17,7 +17,7 @@ import com.example.tokenlabapp.network.MoviesProperty
 class MovieListAdapter(private val onClickListener: OnClickListener) :
     ListAdapter<MoviesProperty, MovieListAdapter.MoviePropertyViewHolder>(DiffCallback) {
     /**
-     * The MarsPropertyViewHolder constructor takes the binding variable from the associated
+     * The MoviePropertyViewHolder constructor takes the binding variable from the associated
      * GridViewItem, which nicely gives it access to the full [MoviesProperty] information.
      */
     class MoviePropertyViewHolder(private val binding: GridViewItemBinding) :
